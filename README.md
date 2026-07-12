@@ -204,15 +204,23 @@
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake-dark.svg"/>
  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake.svg"/>
- <img width="100%" alt="Snake eating my contributions" src="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake.svg"/>
+  <img width="100%" alt="Snake eating my contributions" src="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake.svg"/>
+</picture>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output-games/bomberman-contribution-graph-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output-games/bomberman-contribution-graph.svg"/>
+  <img width="100%" alt="Bomberman blasting my contributions" src="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output-games/bomberman-contribution-graph.svg"/>
 </picture>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
- <defs><linearGradient id="dg6" x1="0" y1="0" x2="1" y2="0">
- <stop offset="0%" stop-color="#d9a543" stop-opacity="0"/><stop offset="20%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="50%" stop-color="#ffd884" stop-opacity="1"/><stop offset="80%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="100%" stop-color="#d9a543" stop-opacity="0"/>
- </linearGradient></defs>
- <rect x="0" y="5" width="700" height="1.5" fill="url(#dg6)"/>
- <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
+  <defs><linearGradient id="dg6" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0%" stop-color="#d9a543" stop-opacity="0"/><stop offset="20%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="50%" stop-color="#ffd884" stop-opacity="1"/><stop offset="80%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="100%" stop-color="#d9a543" stop-opacity="0"/>
+  </linearGradient></defs>
+  <rect x="0" y="5" width="700" height="1.5" fill="url(#dg6)"/>
+  <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
 </svg>
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=620&height=40&lines=%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D" alt="Quote"/>
