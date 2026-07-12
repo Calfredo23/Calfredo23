@@ -187,9 +187,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88" alt="GitHub Analytics"/>
 
-<img height="165" src="https://github-readme-calfredo-stats.vercel.app/api?username=Calfredo23&show_icons=true&count_private=true&hide_border=false&title_color=ffd884&text_color=d3cdbf&icon_color=d9a543&bg_color=2c011a&border_color=562a3e" alt="Stats"/>
-<img height="165" src="https://github-readme-calfredo-stats.vercel.app/api/top-langs/?username=Calfredo23&layout=compact&hide_border=false&langs_count=10&title_color=ffd884&text_color=d3cdbf&icon_color=d9a543&bg_color=2c011a&border_color=562a3e" alt="Top Languages"/>
-
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Calfredo23&bg_color=2c011a&color=ffd884&line=d9a543&point=fffeef&area=true&area_color=45102a&hide_border=false&border_color=562a3e&title_color=ffd884&custom_title=Contribution%20Graph" alt="Activity Graph"/>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
@@ -200,17 +197,7 @@
  <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
 </svg>
 
-<img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=460&height=48&lines=%E2%99%9A+TROPHY+HALL+%E2%99%9A" alt="Trophy Hall"/>
 
-<img width="100%" src="https://github-profile-calfredo-trophy.vercel.app/?username=Calfredo23&theme=onedark&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8&title_color=ffd884" alt="Trophies"/>
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
- <defs><linearGradient id="dg5" x1="0" y1="0" x2="1" y2="0">
- <stop offset="0%" stop-color="#d9a543" stop-opacity="0"/><stop offset="20%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="50%" stop-color="#ffd884" stop-opacity="1"/><stop offset="80%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="100%" stop-color="#d9a543" stop-opacity="0"/>
- </linearGradient></defs>
- <rect x="0" y="5" width="700" height="1.5" fill="url(#dg5)"/>
- <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
-</svg>
 
 <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D" alt="Contribution Arcade"/>
 
