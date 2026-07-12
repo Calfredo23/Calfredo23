@@ -51,39 +51,6 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=440&height=48&lines=%E2%9C%A6+ABOUT+ME+%E2%9C%A6" alt="About Me"/>
-
-<table>
-<tr>
-<td align="center" width="46%">
-
-<img src="https://img.shields.io/badge/Based_in-Lucena_City,_PH-d9a543?style=flat-square&logo=googlemaps&logoColor=1a0010&labelColor=2c011a"/>
-<br/>
-<img src="https://img.shields.io/badge/Focus-Full_Stack_%26_Infra-d9a543?style=flat-square&logo=rocket&logoColor=1a0010&labelColor=2c011a"/>
-<br/>
-<img src="https://img.shields.io/badge/Currently-Building_%26_Shipping-d9a543?style=flat-square&logo=github&logoColor=1a0010&labelColor=2c011a"/>
-<br/>
-<img src="https://img.shields.io/badge/Status-Open_to_Work-ffd884?style=flat-square&logo=handshake&logoColor=1a0010&labelColor=2c011a"/>
-
-</td>
-<td align="left" width="54%">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=13&pause=1400&color=D3CDBF&background=00000000&width=380&height=140&lines=%3E+init+profile.exe;%3E+loading+full-stack+toolkit...;%3E+deploying+meticulous+craftsmanship;%3E+mounting+data+%2B+web+%2B+infra;%3E+ready+to+collaborate+_" alt="terminal"/>
-
-</td>
-</tr>
-</table>
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
- <defs><linearGradient id="dg2" x1="0" y1="0" x2="1" y2="0">
- <stop offset="0%" stop-color="#d9a543" stop-opacity="0"/><stop offset="20%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="50%" stop-color="#ffd884" stop-opacity="1"/><stop offset="80%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="100%" stop-color="#d9a543" stop-opacity="0"/>
- </linearGradient></defs>
- <rect x="0" y="5" width="700" height="1.5" fill="url(#dg2)"/>
- <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
-</svg>
-
-<div align="center">
-
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
  <defs><linearGradient id="dg3" x1="0" y1="0" x2="1" y2="0">
  <stop offset="0%" stop-color="#d9a543" stop-opacity="0"/><stop offset="20%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="50%" stop-color="#ffd884" stop-opacity="1"/><stop offset="80%" stop-color="#d9a543" stop-opacity="0.7"/><stop offset="100%" stop-color="#d9a543" stop-opacity="0"/>
