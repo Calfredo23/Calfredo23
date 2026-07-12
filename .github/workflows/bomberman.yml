@@ -16,6 +16,17 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           games: 'bomberman'
 
+      - name: Recolor to Calfredo palette
+        run: |
+          find ./dist -name "*.svg" -exec sed -i \
+            -e 's/#0d1117/#2c011a/g' \
+            -e 's/#161b22/#3a0524/g' \
+            -e 's/#0e4429/#45102a/g' \
+            -e 's/#006d32/#5c1738/g' \
+            -e 's/#26a641/#8a2655/g' \
+            -e 's/#39d353/#d9a543/g' \
+            -e 's/#8b949e/#ffd884/g' {} +
+
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.PAT }}
