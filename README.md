@@ -201,13 +201,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D" alt="Contribution Arcade"/>
 
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake-dark.svg"/>
- <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake.svg"/>
-  <img width="100%" alt="Snake eating my contributions" src="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output/snake.svg"/>
-</picture>
-
-<br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Calfredo23/Calfredo23/output-games/bomberman-contribution-graph-dark.svg"/>
