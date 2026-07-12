@@ -188,8 +188,6 @@
 <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88" alt="GitHub Analytics"/>
 
 <img height="165" src="https://github-readme-calfredo-stats.vercel.app/api?username=Calfredo23&show_icons=true&count_private=true&hide_border=false&title_color=ffd884&text_color=d3cdbf&icon_color=d9a543&bg_color=2c011a&border_color=562a3e" alt="Stats"/>
-<img height="165" src="https://github-readme-calfredo-streak-stats.vercel.app?user=Calfredo23&hide_border=false&background=2c011a&border=562a3e&stroke=562a3e&ring=d9a543&fire=ffd884&currStreakNum=fffeef&sideNums=d3cdbf&currStreakLabel=d9a543&sideLabels=a09f91&dates=a09f91&titleColor=ffd884" alt="Streak"/>
-
 <img height="165" src="https://github-readme-calfredo-stats.vercel.app/api/top-langs/?username=Calfredo23&layout=compact&hide_border=false&langs_count=10&title_color=ffd884&text_color=d3cdbf&icon_color=d9a543&bg_color=2c011a&border_color=562a3e" alt="Top Languages"/>
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Calfredo23&bg_color=2c011a&color=ffd884&line=d9a543&point=fffeef&area=true&area_color=45102a&hide_border=false&border_color=562a3e&title_color=ffd884&custom_title=Contribution%20Graph" alt="Activity Graph"/>
