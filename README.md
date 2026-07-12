@@ -87,7 +87,7 @@
 </div>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="6">:zap: Programming & Data</td></tr>
+  <tr><td colspan="6">⚡ Programming & Data</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=python&logoColor=d9a543" height="28" alt="Python"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=postgresql&logoColor=d9a543" height="28" alt="SQL"/></td>
@@ -99,7 +99,7 @@
 </table>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="5">:zap: Web & Software</td></tr>
+  <tr><td colspan="5">⚡ Web & Software</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=html5&logoColor=d9a543" height="28" alt="HTML5"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=css3&logoColor=d9a543" height="28" alt="CSS3"/></td>
@@ -117,7 +117,7 @@
 </table>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="6">:zap: Tools & AI</td></tr>
+  <tr><td colspan="6">⚡ Tools & AI</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=microsoftexcel&logoColor=d9a543" height="28" alt="Excel"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=microsoftword&logoColor=d9a543" height="28" alt="Word"/></td>
@@ -142,7 +142,7 @@
 </table>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="5">:zap: Databases</td></tr>
+  <tr><td colspan="5">⚡ Databases</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=mongodb&logoColor=d9a543" height="28" alt="MongoDB"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=postgresql&logoColor=d9a543" height="28" alt="PostgreSQL"/></td>
@@ -153,7 +153,7 @@
 </table>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="6">:zap: Systems & Networking</td></tr>
+  <tr><td colspan="6">⚡ Systems & Networking</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=linux&logoColor=d9a543" height="28" alt="Linux"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=arduino&logoColor=d9a543" height="28" alt="Arduino"/></td>
@@ -165,7 +165,7 @@
 </table>
 
 <table border="0" cellspacing="4" cellpadding="0" align="center">
-  <tr><td colspan="5">:zap: Creative & Docs</td></tr>
+  <tr><td colspan="5">⚡ Creative & Docs</td></tr>
   <tr>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=figma&logoColor=d9a543" height="28" alt="Figma"/></td>
     <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=sketchup&logoColor=d9a543" height="28" alt="SketchUp"/></td>
