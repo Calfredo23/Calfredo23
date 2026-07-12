@@ -18,7 +18,8 @@ jobs:
 
       - name: Recolor to Calfredo palette
         run: |
-          find ./dist -name "*.svg" -exec sed -i \
+          # Dark SVGs (dark background, gold/red cells, light text)
+          find ./dist -name "*-dark.svg" -exec sed -i \
             -e 's/#0d1117/#2c011a/g' \
             -e 's/#161b22/#3a0524/g' \
             -e 's/#0e4429/#45102a/g' \
@@ -26,6 +27,17 @@ jobs:
             -e 's/#26a641/#8a2655/g' \
             -e 's/#39d353/#d9a543/g' \
             -e 's/#8b949e/#ffd884/g' {} +
+
+          # Light SVGs (warm cream bg, light→deep pink→gold)
+          find ./dist -name "*.svg" ! -name "*-dark.svg" -exec sed -i \
+            -e 's/#ffffff/#fff5ec/g' \
+            -e 's/#ebedf0/#fce4ec/g' \
+            -e 's/#9be9a8/#e8b4c8/g' \
+            -e 's/#40c463/#d4739e/g' \
+            -e 's/#30a14e/#a63d6b/g' \
+            -e 's/#216e39/#d9a543/g' \
+            -e 's/#57606a/#5c1738/g' \
+            -e 's/#000000/#2c011a/g' {} +
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
