@@ -86,94 +86,99 @@
 
 </div>
 
-#### `>` Programming & Data
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="6">:zap: Programming & Data</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=python&logoColor=d9a543" height="28" alt="Python"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=postgresql&logoColor=d9a543" height="28" alt="SQL"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=typescript&logoColor=d9a543" height="28" alt="TypeScript"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=apachespark&logoColor=d9a543" height="28" alt="Spark"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=pandas&logoColor=d9a543" height="28" alt="Pandas"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=numpy&logoColor=d9a543" height="28" alt="NumPy"/></td>
+  </tr>
+</table>
 
-<div align="center">
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="5">:zap: Web & Software</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=html5&logoColor=d9a543" height="28" alt="HTML5"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=css3&logoColor=d9a543" height="28" alt="CSS3"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=react&logoColor=d9a543" height="28" alt="React"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=nextdotjs&logoColor=d9a543" height="28" alt="Next.js"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=react&logoColor=d9a543" height="28" alt="React Native"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=django&logoColor=d9a543" height="28" alt="Django"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=astro&logoColor=d9a543" height="28" alt="Astro"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=tailwindcss&logoColor=d9a543" height="28" alt="Tailwind"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=cloudinary&logoColor=d9a543" height="28" alt="Cloudinary"/></td>
+    <td></td>
+  </tr>
+</table>
 
-![Python](https://img.shields.io/badge/Python-45102a?style=flat-square&logo=python&logoColor=d9a543)
-![SQL](https://img.shields.io/badge/SQL-45102a?style=flat-square&logo=postgresql&logoColor=d9a543)
-![TypeScript](https://img.shields.io/badge/TypeScript-45102a?style=flat-square&logo=typescript&logoColor=d9a543)
-![Data Processing](https://img.shields.io/badge/Data_Processing-45102a?style=flat-square&logo=apachespark&logoColor=d9a543)
-![Data Cleaning](https://img.shields.io/badge/Data_Cleaning-45102a?style=flat-square&logo=pandas&logoColor=d9a543)
-![Structured Analysis](https://img.shields.io/badge/Structured_Analysis-45102a?style=flat-square&logo=numpy&logoColor=d9a543)
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="6">:zap: Tools & AI</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=microsoftexcel&logoColor=d9a543" height="28" alt="Excel"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=microsoftword&logoColor=d9a543" height="28" alt="Word"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=git&logoColor=d9a543" height="28" alt="Git"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=visualstudiocode&logoColor=d9a543" height="28" alt="VS Code"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=clickup&logoColor=d9a543" height="28" alt="ClickUp"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=openai&logoColor=d9a543" height="28" alt="ChatGPT"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=x&logoColor=d9a543" height="28" alt="Grok"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=githubcopilot&logoColor=d9a543" height="28" alt="Copilot"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=anthropic&logoColor=d9a543" height="28" alt="Claude"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=anthropic&logoColor=d9a543" height="28" alt="Claude Code"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=google&logoColor=d9a543" height="28" alt="Apps Script"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=cloudflare&logoColor=d9a543" height="28" alt="Cloudflare"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=lightning&logoColor=d9a543" height="28" alt="Groq"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=github&logoColor=d9a543" height="28" alt="GitHub"/></td>
+    <td></td><td></td><td></td><td></td>
+  </tr>
+</table>
 
-</div>
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="5">:zap: Databases</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=mongodb&logoColor=d9a543" height="28" alt="MongoDB"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=postgresql&logoColor=d9a543" height="28" alt="PostgreSQL"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=supabase&logoColor=d9a543" height="28" alt="Supabase"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=convex&logoColor=d9a543" height="28" alt="Convex"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=postgresql&logoColor=d9a543" height="28" alt="Neon"/></td>
+  </tr>
+</table>
 
-#### `>` Web & Software
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="6">:zap: Systems & Networking</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=linux&logoColor=d9a543" height="28" alt="Linux"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=arduino&logoColor=d9a543" height="28" alt="Arduino"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=arduino&logoColor=d9a543" height="28" alt="Arduino IDE"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=virtualbox&logoColor=d9a543" height="28" alt="VirtualBox"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=ubiquiti&logoColor=d9a543" height="28" alt="Networking"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=hackthebox&logoColor=d9a543" height="28" alt="Security"/></td>
+  </tr>
+</table>
 
-<div align="center">
-
-![HTML5](https://img.shields.io/badge/HTML5-45102a?style=flat-square&logo=html5&logoColor=d9a543)
-![CSS3](https://img.shields.io/badge/CSS3-45102a?style=flat-square&logo=css3&logoColor=d9a543)
-![React](https://img.shields.io/badge/React_JS-45102a?style=flat-square&logo=react&logoColor=d9a543)
-![Next.js](https://img.shields.io/badge/Next.js-45102a?style=flat-square&logo=nextdotjs&logoColor=d9a543)
-![React Native](https://img.shields.io/badge/React_Native-45102a?style=flat-square&logo=react&logoColor=d9a543)
-![Django](https://img.shields.io/badge/Django-45102a?style=flat-square&logo=django&logoColor=d9a543)
-![Astro](https://img.shields.io/badge/Astro-45102a?style=flat-square&logo=astro&logoColor=d9a543)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-45102a?style=flat-square&logo=tailwindcss&logoColor=d9a543)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-45102a?style=flat-square&logo=cloudinary&logoColor=d9a543)
-
-</div>
-
-#### `>` Tools & AI
-
-<div align="center">
-
-![Excel](https://img.shields.io/badge/Excel-45102a?style=flat-square&logo=microsoftexcel&logoColor=d9a543)
-![Word](https://img.shields.io/badge/Word-45102a?style=flat-square&logo=microsoftword&logoColor=d9a543)
-![Git](https://img.shields.io/badge/Git-45102a?style=flat-square&logo=git&logoColor=d9a543)
-![VS Code](https://img.shields.io/badge/VS_Code-45102a?style=flat-square&logo=visualstudiocode&logoColor=d9a543)
-![ClickUp](https://img.shields.io/badge/ClickUp-45102a?style=flat-square&logo=clickup&logoColor=d9a543)
-![ChatGPT](https://img.shields.io/badge/ChatGPT-45102a?style=flat-square&logo=openai&logoColor=d9a543)
-![Grok](https://img.shields.io/badge/Grok-45102a?style=flat-square&logo=x&logoColor=d9a543)
-![Copilot](https://img.shields.io/badge/GitHub_Copilot-45102a?style=flat-square&logo=githubcopilot&logoColor=d9a543)
-![Claude](https://img.shields.io/badge/Claude-45102a?style=flat-square&logo=anthropic&logoColor=d9a543)
-![Claude Code](https://img.shields.io/badge/Claude_Code-45102a?style=flat-square&logo=anthropic&logoColor=d9a543)
-![Apps Script](https://img.shields.io/badge/Google_Apps_Script-45102a?style=flat-square&logo=google&logoColor=d9a543)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-45102a?style=flat-square&logo=cloudflare&logoColor=d9a543)
-![Groq](https://img.shields.io/badge/Groq-45102a?style=flat-square&logo=lightning&logoColor=d9a543)
-![GitHub](https://img.shields.io/badge/GitHub-45102a?style=flat-square&logo=github&logoColor=d9a543)
-
-</div>
-
-#### `>` Databases
-
-<div align="center">
-
-![MongoDB](https://img.shields.io/badge/MongoDB-45102a?style=flat-square&logo=mongodb&logoColor=d9a543)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-45102a?style=flat-square&logo=postgresql&logoColor=d9a543)
-![Supabase](https://img.shields.io/badge/Supabase-45102a?style=flat-square&logo=supabase&logoColor=d9a543)
-![Convex](https://img.shields.io/badge/Convex-45102a?style=flat-square&logo=convex&logoColor=d9a543)
-![Neon](https://img.shields.io/badge/Neon_Database-45102a?style=flat-square&logo=postgresql&logoColor=d9a543)
-
-</div>
-
-#### `>` Systems & Networking
-
-<div align="center">
-
-![OS Install](https://img.shields.io/badge/OS_Install_%26_Config-45102a?style=flat-square&logo=linux&logoColor=d9a543)
-![Arduino Uno](https://img.shields.io/badge/Arduino_Uno-45102a?style=flat-square&logo=arduino&logoColor=d9a543)
-![Arduino IDE](https://img.shields.io/badge/Arduino_IDE-45102a?style=flat-square&logo=arduino&logoColor=d9a543)
-![VirtualBox](https://img.shields.io/badge/VirtualBox-45102a?style=flat-square&logo=virtualbox&logoColor=d9a543)
-![LAN Setup](https://img.shields.io/badge/LAN_Setup-45102a?style=flat-square&logo=ubiquiti&logoColor=d9a543)
-![Cybersecurity](https://img.shields.io/badge/Cybersecurity-45102a?style=flat-square&logo=hackthebox&logoColor=d9a543)
-
-</div>
-
-#### `>` Creative & Docs
-
-<div align="center">
-
-![Figma](https://img.shields.io/badge/Figma-45102a?style=flat-square&logo=figma&logoColor=d9a543)
-![SketchUp](https://img.shields.io/badge/SketchUp-45102a?style=flat-square&logo=sketchup&logoColor=d9a543)
-![Canva](https://img.shields.io/badge/Canva-45102a?style=flat-square&logo=canva&logoColor=d9a543)
-![Lucidchart](https://img.shields.io/badge/Lucidchart-45102a?style=flat-square&logo=lucid&logoColor=d9a543)
-![CapCut](https://img.shields.io/badge/CapCut-45102a?style=flat-square&logo=capcut&logoColor=d9a543)
-![Audacity](https://img.shields.io/badge/Audacity-45102a?style=flat-square&logo=audacity&logoColor=d9a543)
-![Tech Docs](https://img.shields.io/badge/Tech_Documentation-45102a?style=flat-square&logo=readme&logoColor=d9a543)
-
-</div>
+<table border="0" cellspacing="4" cellpadding="0" align="center">
+  <tr><td colspan="5">:zap: Creative & Docs</td></tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=figma&logoColor=d9a543" height="28" alt="Figma"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=sketchup&logoColor=d9a543" height="28" alt="SketchUp"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=canva&logoColor=d9a543" height="28" alt="Canva"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=lucid&logoColor=d9a543" height="28" alt="Lucid"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=capcut&logoColor=d9a543" height="28" alt="CapCut"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=audacity&logoColor=d9a543" height="28" alt="Audacity"/></td>
+    <td><img src="https://img.shields.io/badge/-%20-45102a?style=flat-square&logo=readme&logoColor=d9a543" height="28" alt="Documentation"/></td>
+    <td></td><td></td><td></td>
+  </tr>
+</table>
 
 <div align="center">
 
