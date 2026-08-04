@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="calfredo.svg" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="calfredo_light.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="calfredo.svg"/>
+  <img src="calfredo.svg" width="100%" alt="Calfredo"/>
+</picture>
 
 <h1>
 <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=48&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=72&lines=Calfredo" alt="Calfredo"/>
