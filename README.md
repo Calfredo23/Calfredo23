@@ -7,10 +7,18 @@
 </picture>
 
 <h1>
-<img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=48&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=72&lines=Calfredo" alt="Calfredo"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=48&pause=99999&color=2C0119&background=00000000&center=true&vCenter=true&width=560&height=72&lines=Calfredo"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=48&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=72&lines=Calfredo"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=48&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=72&lines=Calfredo" alt="Calfredo"/>
+</picture>
 </h1>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&pause=1200&color=D9A543&background=00000000&center=true&vCenter=true&width=700&height=34&lines=Full+Stack+Developer+%7C+IT+Infrastructure+Specialist;Python+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Django;%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D;Lucena+City%2C+Philippines+%7C+Open+to+Work" alt="Tagline"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&pause=1200&color=2C0119&background=00000000&center=true&vCenter=true&width=700&height=34&lines=Full+Stack+Developer+%7C+IT+Infrastructure+Specialist;Python+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Django;%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D;Lucena+City%2C+Philippines+%7C+Open+to+Work"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&pause=1200&color=D9A543&background=00000000&center=true&vCenter=true&width=700&height=34&lines=Full+Stack+Developer+%7C+IT+Infrastructure+Specialist;Python+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Django;%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D;Lucena+City%2C+Philippines+%7C+Open+to+Work"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&pause=1200&color=D9A543&background=00000000&center=true&vCenter=true&width=700&height=34&lines=Full+Stack+Developer+%7C+IT+Infrastructure+Specialist;Python+%E2%80%A2+TypeScript+%E2%80%A2+React+%E2%80%A2+Django;%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D;Lucena+City%2C+Philippines+%7C+Open+to+Work" alt="Tagline"/>
+</picture>
 <br/><br/>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 12" width="700" height="12">
@@ -63,7 +71,11 @@
  <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
 </svg>
 
-<img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88" alt="GitHub Analytics"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=2C0119&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=520&height=48&lines=%E2%97%88+GITHUB+ANALYTICS+%E2%97%88" alt="GitHub Analytics"/>
+</picture>
 
 <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Calfredo23&bg_color=2c011a&color=ffd884&line=d9a543&point=fffeef&area=true&area_color=45102a&hide_border=false&border_color=562a3e&title_color=ffd884&custom_title=Contribution%20Graph" alt="Activity Graph"/>
 
@@ -77,7 +89,11 @@
 
 
 
-<img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D" alt="Contribution Arcade"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=2C0119&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Chakra+Petch&weight=700&size=28&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=560&height=48&lines=%F0%9F%90%8D+THE+CONTRIBUTION+ARCADE+%F0%9F%90%8D" alt="Contribution Arcade"/>
+</picture>
 
 
 <picture>
@@ -94,7 +110,11 @@
   <circle cx="350" cy="6" r="4" fill="#ffd884"><animate attributeName="r" values="4;5.5;4" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/></circle>
 </svg>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=620&height=40&lines=%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D" alt="Quote"/>
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=99999&color=2C0119&background=00000000&center=true&vCenter=true&width=620&height=40&lines=%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=620&height=40&lines=%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=99999&color=FFD884&background=00000000&center=true&vCenter=true&width=620&height=40&lines=%E2%80%9CMeticulous+Craftsmanship+as+Silent+Virtue%E2%80%9D" alt="Quote"/>
+</picture>
 
 <br/>
 
