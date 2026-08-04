@@ -51,11 +51,11 @@
 </svg>
 <br/>
 
-<a href="https://github.com/Calfredo23"><img src="https://img.shields.io/badge/GitHub-%40Calfredo23-d9a543?style=for-the-badge&logo=github&logoColor=1a0010&labelColor=2c0119"/></a>&nbsp;
-<a href="https://www.linkedin.com/in/cedrick-alfredo-c-b162023a3"><img src="https://img.shields.io/badge/LinkedIn-Connect-d9a543?style=for-the-badge&logo=linkedin&logoColor=1a0010&labelColor=2c0119"/></a>&nbsp;
-<a href="https://www.facebook.com/Calfredo23"><img src="https://img.shields.io/badge/Facebook-Calfredo23-d9a543?style=for-the-badge&logo=facebook&logoColor=1a0010&labelColor=2c0119"/></a>&nbsp;
-<a href="https://discord.com/users/734585074137301074"><img src="https://img.shields.io/badge/Discord-Calfredo-d9a543?style=for-the-badge&logo=discord&logoColor=1a0010&labelColor=2c0119"/></a>&nbsp;
-<a href="mailto:catimbangcedrickalfredo@gmail.com"><img src="https://img.shields.io/badge/Email-Get_In_Touch-d9a543?style=for-the-badge&logo=gmail&logoColor=1a0010&labelColor=2c0119"/></a>
+<a href="https://github.com/Calfredo23"><img src="https://img.shields.io/badge/GitHub-%40Calfredo23-d9a543?style=for-the-badge&logo=github&logoColor=ffd884&labelColor=2c0119"/></a>&nbsp;
+<a href="https://www.linkedin.com/in/cedrick-alfredo-c-b162023a3"><img src="https://img.shields.io/badge/LinkedIn-Connect-d9a543?style=for-the-badge&logo=linkedin&logoColor=ffd884&labelColor=2c0119"/></a>&nbsp;
+<a href="https://www.facebook.com/Calfredo23"><img src="https://img.shields.io/badge/Facebook-Calfredo23-d9a543?style=for-the-badge&logo=facebook&logoColor=ffd884&labelColor=2c0119"/></a>&nbsp;
+<a href="https://discord.com/users/734585074137301074"><img src="https://img.shields.io/badge/Discord-Calfredo-d9a543?style=for-the-badge&logo=discord&logoColor=ffd884&labelColor=2c0119"/></a>&nbsp;
+<a href="mailto:catimbangcedrickalfredo@gmail.com"><img src="https://img.shields.io/badge/Email-Get_In_Touch-d9a543?style=for-the-badge&logo=gmail&logoColor=ffd884&labelColor=2c0119"/></a>
 <br/><br/>
 
 <img src="https://komarev.com/ghpvc/?username=Calfredo23&style=for-the-badge&color=2c0119&label=PROFILE+VIEWS&abbreviated=true" alt="Profile Views"/>
