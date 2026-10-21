@@ -1,1 +1,4 @@
+node_modules/
+tools/tmp/
+docs/velitaxis/SECRETS.local.md
 old backup/

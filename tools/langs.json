@@ -1,0 +1,49 @@
+{
+  "user": "Calfredo23",
+  "asOf": "2026-10-15",
+  "repos": 12,
+  "scope": "12 PUBLIC REPOS · BYTES OF TRACKED SOURCE",
+  "totalBytes": 6764032,
+  "sourceBytes": 226856,
+  "rows": [
+    {
+      "name": "Python",
+      "bytes": 120082,
+      "pct": 52.93
+    },
+    {
+      "name": "CSS",
+      "bytes": 41624,
+      "pct": 18.35
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 28824,
+      "pct": 12.71
+    },
+    {
+      "name": "Astro",
+      "bytes": 17443,
+      "pct": 7.69
+    },
+    {
+      "name": "HTML",
+      "bytes": 17305,
+      "pct": 7.63
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 1578,
+      "pct": 0.7
+    }
+  ],
+  "excluded": {
+    "name": "Jupyter Notebook",
+    "bytes": 6537176,
+    "pctOfAll": 96.65,
+    "repos": [
+      "data-mining-repo"
+    ],
+    "why": "6.23 MB OF SERIALIZED .IPYNB JSON, NOT TYPED SOURCE"
+  }
+}

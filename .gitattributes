@@ -1,0 +1,7 @@
+# Line endings are pinned, not left to each clone. tools/build.mjs --check diffs rendered markup
+# against the committed bytes, and a core.autocrlf=true clone on Windows would rewrite every
+# .svg and disagree with a fresh Linux checkout about whether the assets match their own generator.
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
+*.jpg binary
