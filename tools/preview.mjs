@@ -33,14 +33,7 @@ const files = existsSync(ASSETS) ? await readdir(ASSETS) : [];
 if (!files.length) { console.error('  no assets — run node tools/build.mjs first'); process.exit(2); }
 
 // Reading order, so the sheet is a storyboard and not an alphabet.
-const ORDER = [
-  'hero-sheet.svg',
-  'head-activity.svg', 'streak-plate.svg', 'lang-ledger.svg', 'rule.svg',
-  'head-field.svg', 'topology.svg',
-  'head-tooling.svg', 'rack-languages.svg', 'rack-web.svg', 'rack-data.svg',
-  'rack-systems.svg', 'rack-craft.svg',
-  'head-shipped.svg', 'rule-cap.svg', 'head-spec.svg', 'footer-plate.svg',
-];
+const ORDER = ['hypergamy.svg'];
 const master = (list) => list.filter((f) => !f.endsWith('-pocket.svg'));
 const pocket = (list) => list.filter((f) => f.endsWith('-pocket.svg'));
 const ordered = [

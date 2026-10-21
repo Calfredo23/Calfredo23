@@ -635,6 +635,34 @@ const ICONS = {
       `A7 7 0 1 1 ${n(cx + 3)} ${n(cy - 8)} Z" fill="none" stroke="${color}" stroke-width="1.4"/>`,
 };
 
+const FRAME_DEFS = `
+<linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="${col('brass')}"/><stop offset=".5" stop-color="${col('gilt')}"/><stop offset="1" stop-color="${col('gold')}"/>
+</linearGradient>
+<g id="deco">
+  <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
+  <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="${col('gold')}" stroke-opacity="0.35"/>
+  <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="${col('brass')}" stroke-opacity="0.3"/>
+  <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="${col('brass')}" stroke-opacity="0.2"/>
+</g>
+<g id="crest">
+  <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="${col('brass')}" fill-opacity="0.7"/>
+  <path d="M-18 0 H-8 M8 0 H18" fill="none" stroke="${col('brass')}" stroke-opacity="0.35"/>
+</g>`;
+
+function premiumFrame(w, h, inset, s = 1) {
+  const a = inset, z = w - inset, b = h - inset;
+  return `<rect x="${a}" y="${a}" width="${z - a}" height="${b - a}" fill="none"
+      stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
+<rect x="${a + 6}" y="${a + 6}" width="${z - a - 12}" height="${b - a - 12}" fill="none"
+      stroke="${col('gold')}" stroke-opacity="0.3"/>
+<use href="#deco" transform="translate(${a} ${a}) scale(${s})"/>
+<use href="#deco" transform="translate(${z} ${a}) scale(${-s} ${s})"/>
+<use href="#deco" transform="translate(${a} ${b}) scale(${s} ${-s})"/>
+<use href="#deco" transform="translate(${z} ${b}) scale(${-s} ${-s})"/>
+<use href="#crest" transform="translate(${n(w / 2)} ${a}) scale(${s})"/>
+<use href="#crest" transform="translate(${n(w / 2)} ${b}) scale(${s})"/>`;
+}
 const GRAPH_CSS = `
 @media (prefers-reduced-motion: no-preference){
   .spin{transform-box:fill-box;transform-origin:center;animation:spin 44s linear infinite}
@@ -740,9 +768,7 @@ async function hypergamySheet() {
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
 ${paper.join('')}
-<rect x="${inset}" y="${inset}" width="${W - 2 * inset}" height="${H - 2 * inset}" fill="none"
-      stroke="${col('brass')}" stroke-opacity="${T.color.ruleAlpha}"/>
-${cornerBrackets(W, H, inset, 20)}
+${premiumFrame(W, H, inset)}
 ${text(g.kicker, left, 26, 'label', 'gold', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
 ${text(`${g.dwg} · ${g.rev}`, right, 26, 'label', 'ash', { anchor: 'end', size: 8.5, tracking: 0.16, opacity: 0.6 })}
 <line x1="${inset + 20}" y1="34" x2="${W - inset - 20}" y2="34" stroke="${col('brass')}" stroke-opacity="0.2"/>
@@ -784,7 +810,7 @@ ${text(g.punchline, right, 560, 'label', 'brass', { anchor: 'end', size: 8.5, tr
 ${text(g.disclaimer, left, 578, 'label', 'ash', { size: 8, tracking: 0.14, opacity: 0.65 })}
 `, {
     style: GRAPH_CSS,
-    extraDefs: `${GLOW}${BAR_FILL}
+    extraDefs: `${FRAME_DEFS}${GLOW}${BAR_FILL}
 <radialGradient id="halo"><stop offset="0%" stop-color="${col('gold')}" stop-opacity="0.3"/>
 <stop offset="60%" stop-color="${col('gold')}" stop-opacity="0.07"/>
 <stop offset="100%" stop-color="${col('gold')}" stop-opacity="0"/></radialGradient>
@@ -834,10 +860,8 @@ async function hypergamyPocket() {
 
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
-<rect x="${inset}" y="${inset}" width="${W - 2 * inset}" height="${H - 2 * inset}" fill="none"
-      stroke="${col('brass')}" stroke-opacity="${T.color.ruleAlpha}"/>
-${cornerBrackets(W, H, inset, 14)}
-${text('FIG. 02 · HYPERGAMY', left, 26, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
+${premiumFrame(W, H, inset, 0.72)}
+${text('HYPERGAMY', left, 26, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
 ${text(`${g.dwg} · REV B`, right, 26, 'label', 'ash', { anchor: 'end', size: 7.5, tracking: 0.14, opacity: 0.6 })}
 <line x1="${inset + 16}" y1="34" x2="${W - inset - 16}" y2="34" stroke="${col('brass')}" stroke-opacity="0.2"/>
 ${text(g.titleA + g.titleB + g.titleC, W / 2, 60, 'display', 'gilt',
@@ -871,7 +895,7 @@ ${text(g.punchline, left, 456, 'label', 'brass', { size: 8, tracking: 0.12 })}
 ${text(g.disclaimer, left, 468, 'label', 'ash', { size: 7, tracking: 0.12, opacity: 0.65 })}
 `, {
     style: GRAPH_CSS,
-    extraDefs: `${GLOW}${BAR_FILL}
+    extraDefs: `${FRAME_DEFS}${GLOW}${BAR_FILL}
 <radialGradient id="halo"><stop offset="0%" stop-color="${col('gold')}" stop-opacity="0.28"/>
 <stop offset="60%" stop-color="${col('gold')}" stop-opacity="0.06"/>
 <stop offset="100%" stop-color="${col('gold')}" stop-opacity="0"/></radialGradient>
@@ -894,15 +918,14 @@ if (!SEAL_B64 || !SEAL_POCKET_B64) {
 
 // Which assets get a pocket twin. `rule` and `rule-cap` carry no type, so scaling them is
 // harmless and a second file would be dead weight; everything with a label under ~12 px does.
-// The page is now two sheets, each with a pocket twin. The retired activity/tooling/shipped/
+// The page is now one sheet, with a pocket twin. The retired hero, activity/tooling/shipped/
 // spec plates are still in this generator for rollback, but they are not built: a dead asset is
 // checkout weight and a second palette waiting to drift.
-const POCKET = new Set(['hero-sheet', 'hypergamy']);
+const POCKET = new Set(['hypergamy']);
 
 async function buildSet(width) {
   setWidth(width);
   const a = {};
-  a['hero-sheet'] = width === T.meta.designWidth ? await heroSheet() : await heroPocket();
   a['hypergamy'] = width === T.meta.designWidth ? await hypergamySheet() : await hypergamyPocket();
   return a;
 }

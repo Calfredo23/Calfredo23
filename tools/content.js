@@ -90,7 +90,7 @@ export const topology = null;
 // ("percentages are vibes, not telemetry"), which is the condition for drawing them at all.
 // Relationship-status lines describe technologies, never people. Keep it self-deprecating.
 export const hypergamy = {
-  kicker: 'FIG. 02 · ATTENTION TOPOLOGY',
+  kicker: 'ATTENTION TOPOLOGY',
   titleA: 'THE ',
   titleB: 'HYPERGAMY',
   titleC: ' GRAPH',

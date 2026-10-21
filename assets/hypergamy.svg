@@ -1,5 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 840 596" width="840" height="596" role="img">
-<defs><filter id="glow" x="-40%" y="-60%" width="180%" height="240%">
+<defs>
+<linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="1">
+  <stop stop-color="#d79628"/><stop offset=".5" stop-color="#ffd884"/><stop offset="1" stop-color="#d9a543"/>
+</linearGradient>
+<g id="deco">
+  <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
+  <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="#d9a543" stroke-opacity="0.35"/>
+  <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="#d79628" stroke-opacity="0.3"/>
+  <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="#d79628" stroke-opacity="0.2"/>
+</g>
+<g id="crest">
+  <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="#d79628" fill-opacity="0.7"/>
+  <path d="M-18 0 H-8 M8 0 H18" fill="none" stroke="#d79628" stroke-opacity="0.35"/>
+</g><filter id="glow" x="-40%" y="-60%" width="180%" height="240%">
 <feGaussianBlur stdDeviation="7" result="b"/>
 <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
 <stop offset="0%" stop-color="#ffd884"/>
@@ -29,9 +42,16 @@
 <rect width="840" height="596" fill="#2c011a"/>
 <line x1="320" y1="124" x2="320" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="360" y1="124" x2="360" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="400" y1="124" x2="400" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="440" y1="124" x2="440" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="480" y1="124" x2="480" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="520" y1="124" x2="520" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="560" y1="124" x2="560" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="600" y1="124" x2="600" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="640" y1="124" x2="640" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="680" y1="124" x2="680" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="720" y1="124" x2="720" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="760" y1="124" x2="760" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="800" y1="124" x2="800" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="124" x2="803" y2="124" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="164" x2="803" y2="164" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="204" x2="803" y2="204" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="244" x2="803" y2="244" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="284" x2="803" y2="284" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="324" x2="803" y2="324" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="364" x2="803" y2="364" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="404" x2="803" y2="404" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="444" x2="803" y2="444" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="484" x2="803" y2="484" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="524" x2="803" y2="524" stroke="#d79628" stroke-opacity="0.045"/>
 <rect x="11" y="11" width="818" height="574" fill="none"
-      stroke="#d79628" stroke-opacity="0.18"/>
-<path d="M11 11 l20 0 M11 11 l0 20" stroke="#d9a543" stroke-width="2" stroke-opacity="0.55" fill="none"/><path d="M829 11 l-20 0 M829 11 l0 20" stroke="#d9a543" stroke-width="2" stroke-opacity="0.55" fill="none"/><path d="M11 585 l20 0 M11 585 l0 -20" stroke="#d9a543" stroke-width="2" stroke-opacity="0.55" fill="none"/><path d="M829 585 l-20 0 M829 585 l0 -20" stroke="#d9a543" stroke-width="2" stroke-opacity="0.55" fill="none"/>
-<text x="37" y="26" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.7" fill="#d9a543" fill-opacity="0.85">FIG. 02 · ATTENTION TOPOLOGY</text>
+      stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
+<rect x="17" y="17" width="806" height="562" fill="none"
+      stroke="#d9a543" stroke-opacity="0.3"/>
+<use href="#deco" transform="translate(11 11) scale(1)"/>
+<use href="#deco" transform="translate(829 11) scale(-1 1)"/>
+<use href="#deco" transform="translate(11 585) scale(1 -1)"/>
+<use href="#deco" transform="translate(829 585) scale(-1 -1)"/>
+<use href="#crest" transform="translate(420 11) scale(1)"/>
+<use href="#crest" transform="translate(420 585) scale(1)"/>
+<text x="37" y="26" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.7" fill="#d9a543" fill-opacity="0.85">ATTENTION TOPOLOGY</text>
 <text x="803" y="26" text-anchor="end" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.36" fill="#b8b7a9" fill-opacity="0.6">CAL-PRF-2026-02 · B · 2026-10-21</text>
 <line x1="31" y1="34" x2="809" y2="34" stroke="#d79628" stroke-opacity="0.2"/>
 <text x="37" y="86" text-anchor="start" font-family="Chakra Petch" font-weight="700" font-size="44" letter-spacing="0.88" fill="#b8b7a9">THE </text>
