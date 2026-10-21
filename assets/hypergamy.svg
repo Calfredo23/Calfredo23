@@ -6,8 +6,10 @@
 <g id="deco">
   <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
   <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="#d9a543" stroke-opacity="0.35"/>
+  <path d="M0 0 H18 V6 H12 V12 H6 V18 H0" fill="none" stroke="#2c011a" stroke-opacity="0.85" stroke-width="0.8"/>
   <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="#d79628" stroke-opacity="0.3"/>
   <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="#d79628" stroke-opacity="0.2"/>
+  <path d="M0 -3 L3 0 L0 3 L-3 0 Z" fill="#2c011a" stroke="#ffd884" stroke-opacity="0.55" stroke-width="0.7"/>
 </g>
 <g id="crest">
   <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="#d79628" fill-opacity="0.7"/>
@@ -40,8 +42,16 @@
 @keyframes node{0%,100%{stroke-opacity:.3}50%{stroke-opacity:.7}}
 @keyframes flow{to{stroke-dashoffset:-20}}</style>
 <rect width="840" height="596" fill="#100009"/>
-<line x1="320" y1="124" x2="320" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="360" y1="124" x2="360" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="400" y1="124" x2="400" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="440" y1="124" x2="440" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="480" y1="124" x2="480" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="520" y1="124" x2="520" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="560" y1="124" x2="560" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="600" y1="124" x2="600" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="640" y1="124" x2="640" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="680" y1="124" x2="680" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="720" y1="124" x2="720" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="760" y1="124" x2="760" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="800" y1="124" x2="800" y2="540" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="124" x2="803" y2="124" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="164" x2="803" y2="164" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="204" x2="803" y2="204" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="244" x2="803" y2="244" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="284" x2="803" y2="284" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="324" x2="803" y2="324" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="364" x2="803" y2="364" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="404" x2="803" y2="404" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="444" x2="803" y2="444" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="484" x2="803" y2="484" stroke="#d79628" stroke-opacity="0.045"/><line x1="320" y1="524" x2="803" y2="524" stroke="#d79628" stroke-opacity="0.045"/>
-<rect x="11" y="11" width="818" height="574" fill="none"
+<path d="M320 124V540M360 124V540M400 124V540M440 124V540M480 124V540M520 124V540M560 124V540M600 124V540M640 124V540M680 124V540M720 124V540M760 124V540M800 124V540M320 124H803M320 164H803M320 204H803M320 244H803M320 284H803M320 324H803M320 364H803M320 404H803M320 444H803M320 484H803M320 524H803" fill="none" stroke="#d79628" stroke-opacity="0.045"/>
+<defs>
+    <path id="tx" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2M339 1v2M387 1v2M435 1v2M483 1v2M531 1v2M579 1v2M627 1v2M675 1v2M723 1v2M771 1v2" stroke="#d79628" stroke-opacity=".24"/>
+    <path id="ty" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2M339 1v2M387 1v2M435 1v2M483 1v2M531 1v2" stroke="#d79628" stroke-opacity=".24"/>
+    <g id="ej">
+      <path d="M0 -3.4 L3.4 0 L0 3.4 L-3.4 0 Z" fill="#ffd884"/>
+      <path d="M0 -1.6 L1.6 0 L0 1.6 L-1.6 0 Z" fill="#2c011a"/>
+    </g>
+  </defs>
+    <use href="#tx" transform="translate(11 11)"/><use href="#ty" transform="translate(11 11)"/><use href="#ty" transform="translate(829 11) scale(-1 1)"/><use href="#tx" transform="translate(11 585) scale(1 -1)"/><rect x="11" y="11" width="818" height="574" fill="none"
       stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
 <rect x="17" y="17" width="806" height="562" fill="none"
       stroke="#d9a543" stroke-opacity="0.3"/>
@@ -49,6 +59,8 @@
 <use href="#deco" transform="translate(829 11) scale(-0.8 0.8)"/>
 <use href="#deco" transform="translate(11 585) scale(0.8 -0.8)"/>
 <use href="#deco" transform="translate(829 585) scale(-0.8 -0.8)"/>
+<use href="#ej" transform="translate(11 298)"/>
+<use href="#ej" transform="translate(829 298)"/>
 <use href="#crest" transform="translate(420 11) scale(0.8)"/>
 <use href="#crest" transform="translate(420 585) scale(0.8)"/>
 <text x="37" y="27" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.7" fill="#d9a543" fill-opacity="0.85">ATTENTION TOPOLOGY</text>
@@ -61,8 +73,8 @@
 <text x="37" y="110" text-anchor="start" font-family="Cabin" font-weight="400" font-size="14" letter-spacing="0.14" fill="#b8b7a9" fill-opacity="0.85">A totally scientific diagram of where a full-stack developer's attention actually goes.</text>
 <line x1="37" y1="124" x2="803" y2="124" stroke="#d9a543" stroke-opacity="0.35"/>
 <text x="570" y="152" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="8" letter-spacing="1.44" fill="#d9a543">ATTENTION SHARE</text><text x="570" y="166" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="0.75" fill="#b8b7a9" fill-opacity="0.6">0</text><text x="607.5" y="166" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="0.75" fill="#b8b7a9" fill-opacity="0.6">25</text><text x="645" y="166" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="0.75" fill="#b8b7a9" fill-opacity="0.6">50</text><text x="682.5" y="166" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="0.75" fill="#b8b7a9" fill-opacity="0.6">75</text><text x="720" y="166" text-anchor="end" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="0.75" fill="#b8b7a9" fill-opacity="0.6">100</text>
-<line x1="607.5" y1="170" x2="607.5" y2="486" stroke="#d79628" stroke-opacity="0.08"/><line x1="645" y1="170" x2="645" y2="486" stroke="#d79628" stroke-opacity="0.08"/><line x1="682.5" y1="170" x2="682.5" y2="486" stroke="#d79628" stroke-opacity="0.08"/>
-<line x1="320" y1="216" x2="803" y2="216" stroke="#d79628" stroke-opacity="0.07"/><line x1="320" y1="272" x2="803" y2="272" stroke="#d79628" stroke-opacity="0.07"/><line x1="320" y1="328" x2="803" y2="328" stroke="#d79628" stroke-opacity="0.07"/><line x1="320" y1="384" x2="803" y2="384" stroke="#d79628" stroke-opacity="0.07"/><line x1="320" y1="440" x2="803" y2="440" stroke="#d79628" stroke-opacity="0.07"/>
+<path d="M607.5 170V486M645 170V486M682.5 170V486" fill="none" stroke="#d79628" stroke-opacity="0.08"/>
+<path d="M320 216H803M320 272H803M320 328H803M320 384H803M320 440H803" fill="none" stroke="#d79628" stroke-opacity="0.07"/>
 <path id="edge-ai" d="M252 320 C286 320 302 188 338 188" fill="none" stroke="#d9a543" stroke-opacity="0.38" stroke-width="2.24"/><circle class="pkt" r="2.2" fill="#ffd884" opacity="0">
         <animate attributeName="opacity" from="0" to="1" begin="0.05s" dur="0.01s" fill="freeze"/>
         <animateMotion dur="4.2s" begin="0s" repeatCount="indefinite">

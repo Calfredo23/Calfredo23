@@ -6,8 +6,10 @@
 <g id="deco">
   <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
   <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="#d9a543" stroke-opacity="0.35"/>
+  <path d="M0 0 H18 V6 H12 V12 H6 V18 H0" fill="none" stroke="#2c011a" stroke-opacity="0.85" stroke-width="0.8"/>
   <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="#d79628" stroke-opacity="0.3"/>
   <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="#d79628" stroke-opacity="0.2"/>
+  <path d="M0 -3 L3 0 L0 3 L-3 0 Z" fill="#2c011a" stroke="#ffd884" stroke-opacity="0.55" stroke-width="0.7"/>
 </g>
 <g id="crest">
   <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="#d79628" fill-opacity="0.7"/>
@@ -40,7 +42,15 @@
 @keyframes node{0%,100%{stroke-opacity:.3}50%{stroke-opacity:.7}}
 @keyframes flow{to{stroke-dashoffset:-20}}</style>
 <rect width="360" height="490" fill="#100009"/>
-<rect x="11" y="11" width="338" height="468" fill="none"
+<defs>
+    <path id="tx" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2" stroke="#d79628" stroke-opacity=".24"/>
+    <path id="ty" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2M339 1v2M387 1v2M435 1v2" stroke="#d79628" stroke-opacity=".24"/>
+    <g id="ej">
+      <path d="M0 -3.4 L3.4 0 L0 3.4 L-3.4 0 Z" fill="#ffd884"/>
+      <path d="M0 -1.6 L1.6 0 L0 1.6 L-1.6 0 Z" fill="#2c011a"/>
+    </g>
+  </defs>
+    <use href="#tx" transform="translate(11 11)"/><use href="#ty" transform="translate(11 11)"/><use href="#ty" transform="translate(349 11) scale(-1 1)"/><use href="#tx" transform="translate(11 479) scale(1 -1)"/><rect x="11" y="11" width="338" height="468" fill="none"
       stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
 <rect x="17" y="17" width="326" height="456" fill="none"
       stroke="#d9a543" stroke-opacity="0.3"/>
@@ -48,6 +58,8 @@
 <use href="#deco" transform="translate(349 11) scale(-0.6 0.6)"/>
 <use href="#deco" transform="translate(11 479) scale(0.6 -0.6)"/>
 <use href="#deco" transform="translate(349 479) scale(-0.6 -0.6)"/>
+<use href="#ej" transform="translate(11 245)"/>
+<use href="#ej" transform="translate(349 245)"/>
 <use href="#crest" transform="translate(180 11) scale(0.6)"/>
 <use href="#crest" transform="translate(180 479) scale(0.6)"/>
 <text x="31" y="27" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="7.5" letter-spacing="1.35" fill="#d9a543" fill-opacity="0.85">HYPERGAMY</text>

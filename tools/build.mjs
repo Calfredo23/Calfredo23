@@ -642,8 +642,10 @@ const FRAME_DEFS = `
 <g id="deco">
   <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
   <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="${col('gold')}" stroke-opacity="0.35"/>
+  <path d="M0 0 H18 V6 H12 V12 H6 V18 H0" fill="none" stroke="${col('plate')}" stroke-opacity="0.85" stroke-width="0.8"/>
   <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="${col('brass')}" stroke-opacity="0.3"/>
   <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="${col('brass')}" stroke-opacity="0.2"/>
+  <path d="M0 -3 L3 0 L0 3 L-3 0 Z" fill="${col('plate')}" stroke="${col('gilt')}" stroke-opacity="0.55" stroke-width="0.7"/>
 </g>
 <g id="crest">
   <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="${col('brass')}" fill-opacity="0.7"/>
@@ -652,7 +654,33 @@ const FRAME_DEFS = `
 
 function premiumFrame(w, h, inset, s = 1) {
   const a = inset, z = w - inset, b = h - inset;
-  return `<rect x="${a}" y="${a}" width="${z - a}" height="${b - a}" fill="none"
+  // Engraved ruler band: hairline ticks in the 6 px channel between the two frame rules.
+  // They start 40 px in from every corner, so the corner ornaments never paint over them,
+  // and they live inside the frame band, where no text is placed to collide with.
+  const band = (span) => {
+    let d = '';
+    for (let x = inset + 40; x <= span - inset - 40; x += 48) d += `M${n(x)} 1v2`;
+    return d;
+  };
+  const runX = band(w), runY = band(h);
+  // One geometry each in <defs>, four <use> placements — the ticks and the mid-edge
+  // jewel are written to the SVG once, stroke included, like #deco and #crest above.
+  const TICKS = `<defs>
+    <path id="tx" d="${runX}" stroke="${col('brass')}" stroke-opacity=".24"/>
+    <path id="ty" d="${runY}" stroke="${col('brass')}" stroke-opacity=".24"/>
+    <g id="ej">
+      <path d="M0 -3.4 L3.4 0 L0 3.4 L-3.4 0 Z" fill="${col('gilt')}"/>
+      <path d="M0 -1.6 L1.6 0 L0 1.6 L-1.6 0 Z" fill="${col('plate')}"/>
+    </g>
+  </defs>`;
+  const ticks =
+    `${TICKS}
+    <use href="#tx" transform="translate(${a} ${a})"/>` +
+    `<use href="#ty" transform="translate(${a} ${a})"/>` +
+    `<use href="#ty" transform="translate(${z} ${a}) scale(-1 1)"/>` +
+    `<use href="#tx" transform="translate(${a} ${b}) scale(1 -1)"/>`;
+  return ticks +
+`<rect x="${a}" y="${a}" width="${z - a}" height="${b - a}" fill="none"
       stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
 <rect x="${a + 6}" y="${a + 6}" width="${z - a - 12}" height="${b - a - 12}" fill="none"
       stroke="${col('gold')}" stroke-opacity="0.3"/>
@@ -660,6 +688,8 @@ function premiumFrame(w, h, inset, s = 1) {
 <use href="#deco" transform="translate(${z} ${a}) scale(${-s} ${s})"/>
 <use href="#deco" transform="translate(${a} ${b}) scale(${s} ${-s})"/>
 <use href="#deco" transform="translate(${z} ${b}) scale(${-s} ${-s})"/>
+<use href="#ej" transform="translate(${a} ${n(h / 2)})"/>
+<use href="#ej" transform="translate(${z} ${n(h / 2)})"/>
 <use href="#crest" transform="translate(${n(w / 2)} ${a}) scale(${s})"/>
 <use href="#crest" transform="translate(${n(w / 2)} ${b}) scale(${s})"/>`;
 }
@@ -710,8 +740,7 @@ async function hypergamySheet() {
     })).join('');
 
   const grid = [25, 50, 75].map((v) =>
-    `<line x1="${n(barX + barW * v / 100)}" y1="170" x2="${n(barX + barW * v / 100)}" y2="486" ` +
-      `stroke="${col('brass')}" stroke-opacity="0.08"/>`
+    `M${n(barX + barW * v / 100)} 170V486`
   ).join('');
 
   const rows = g.nodes.map((d, i) => {
@@ -744,19 +773,17 @@ async function hypergamySheet() {
   }).join('');
 
   const seps = g.nodes.slice(1).map((_, i) =>
-    `<line x1="320" y1="${n(rowsTop + (i + 1) * pitch - 28)}" x2="${right}" y2="${n(rowsTop + (i + 1) * pitch - 28)}" ` +
-      `stroke="${col('brass')}" stroke-opacity="0.07"/>`
+    `M320 ${n(rowsTop + (i + 1) * pitch - 28)}H${n(right)}`
   ).join('');
 
   // Graph paper, not the hero's tick band. The ticks are the sheet's signature on a portrait
   // plate; here the panel is a chart, and 24 hairlines cost a fifth of the 176 tick strokes.
+  // Graph paper, not the hero tick band: 24 hairlines as ONE path instead of 24
+  // <line> elements carrying the same stroke attributes each. Same geometry, same
+  // opacity, a fraction of the bytes — this is what pays for the engraved frame.
   const paper = [];
-  for (let x = 320; x <= right; x += 40) {
-    paper.push(`<line x1="${x}" y1="124" x2="${x}" y2="540" stroke="${col('brass')}" stroke-opacity="0.045"/>`);
-  }
-  for (let y = 124; y <= 540; y += 40) {
-    paper.push(`<line x1="320" y1="${y}" x2="${right}" y2="${y}" stroke="${col('brass')}" stroke-opacity="0.045"/>`);
-  }
+  for (let x = 320; x <= right; x += 40) paper.push(`M${n(x)} 124V540`);
+  for (let y = 124; y <= 540; y += 40) paper.push(`M320 ${n(y)}H${n(right)}`);
 
   const tagX = seal.cx - 52, tagY = 460, tagW = 104, tagH = 22, tagK = T.geometry.notch;
   const tag = `<path d="M${tagX + tagK} ${tagY} H${tagX + tagW} V${tagY + tagH - tagK} ` +
@@ -767,7 +794,7 @@ async function hypergamySheet() {
 
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
-${paper.join('')}
+<path d="${paper.join('')}" fill="none" stroke="${col('brass')}" stroke-opacity="0.045"/>
 ${premiumFrame(W, H, inset, 0.8)}
 ${text(g.kicker, left, 27, 'label', 'gold', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
 ${text(`${g.dwg} · ${g.rev}`, right, 27, 'label', 'ash', { anchor: 'end', size: 8.5, tracking: 0.16, opacity: 0.6 })}
@@ -779,8 +806,8 @@ ${text(g.note, right, 86, 'label', 'brass', { anchor: 'end', size: 8, tracking: 
 ${text(g.subtitle, left, 110, 'body', 'ash', { size: subSize, tracking: 0.01, upper: false, opacity: 0.85 })}
 <line x1="${left}" y1="124" x2="${right}" y2="124" stroke="${col('gold')}" stroke-opacity="0.35"/>
 ${axis}
-${grid}
-${seps}
+${`<path d="${grid}" fill="none" stroke="${col('brass')}" stroke-opacity="0.08"/>`}
+${`<path d="${seps}" fill="none" stroke="${col('brass')}" stroke-opacity="0.07"/>`}
 ${rows}
 <circle cx="${seal.cx}" cy="${seal.cy}" r="110" fill="url(#halo)"/>
 <polygon points="${hex(seal.cx, seal.cy, seal.r)}" fill="${col('plate')}"
