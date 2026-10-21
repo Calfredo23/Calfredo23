@@ -63,7 +63,8 @@ in `tools/seal/`. Only `mk-seal.mjs` needs a browser, and only when `logo.svg` c
 
 **Budget**, printed on every run and measured rather than guessed: 48 KB per asset, 160 KB per
 visitor (the larger of the two `<picture>` branches — a reader downloads exactly one), 320 KB for
-the whole folder. Currently 46,905 B / 89,740 B.
+the whole folder — the motto band rides the same branch logic, so a visitor downloads one
+band + one graph. Currently 59,001 B / 113,834 B.
 
 The hero and the retired activity, field-work, tooling, shipped and specification sheets were
 removed from the page on 2026-10-21. Their generators remain in `build.mjs` and their copy remains

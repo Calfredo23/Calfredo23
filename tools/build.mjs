@@ -930,6 +930,49 @@ ${text(g.disclaimer, left, 468, 'label', 'ash', { size: 7, tracking: 0.12, opaci
   });
 }
 
+
+// ── the motto band ──────────────────────────────────────────────────────────
+// A quiet opening rail, not a second hero: the handle rail, the motto, and the
+// location/signature line, inside the same engraved frame language as the sheet
+// below it. It exists to open the page before the drawing does the talking.
+async function mottoSheet() {
+  RUNS = new Map();
+  const H = 126, inset = T.geometry.tickInset;
+  const left = inset + 26, right = W - inset - 26;
+  const g = C.hypergamy;
+  const mottoSize = fit(C.motto, 'body', right - left, 18, 0.03);
+  return svgDoc(H, `
+<rect width="${W}" height="${H}" fill="${col('sheet')}"/>
+${premiumFrame(W, H, inset, 0.8)}
+${text(`${C.name} \u00b7 ${C.role}`, left, 30, 'label', 'brass', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
+${text(g.status, right, 30, 'label', 'gilt', { anchor: 'end', size: 8.5, tracking: 0.22 })}
+<line x1="${inset + 20}" y1="40" x2="${W - inset - 20}" y2="40" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${text(C.motto, left, 74, 'body', 'gilt', { size: mottoSize, tracking: 0.03, upper: false, filter: 'glow' })}
+<line x1="${inset + 20}" y1="89" x2="${W - inset - 20}" y2="89" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${text(C.location, left, 106, 'label', 'ash', { size: 8, tracking: 0.16, opacity: 0.65 })}
+${text(C.signature, right, 106, 'label', 'brass', { anchor: 'end', size: 8, tracking: 0.2, opacity: 0.75 })}
+`, { extraDefs: `${FRAME_DEFS}${GLOW}` });
+}
+
+async function mottoPocket() {
+  RUNS = new Map();
+  const H = 104, inset = T.geometry.tickInset;
+  const left = inset + 20, right = W - inset - 20;
+  const g = C.hypergamy;
+  const mottoSize = fit(C.motto, 'body', right - left, 11, 0.01);
+  return svgDoc(H, `
+<rect width="${W}" height="${H}" fill="${col('sheet')}"/>
+${premiumFrame(W, H, inset, 0.6)}
+${text(C.role, left, 27, 'label', 'brass', { size: 7.5, tracking: 0.14, opacity: 0.85 })}
+${text(g.status, right, 27, 'label', 'gilt', { anchor: 'end', size: 7.5, tracking: 0.16 })}
+<line x1="${inset + 16}" y1="35" x2="${W - inset - 16}" y2="35" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${text(C.motto, left, 58, 'body', 'gilt', { size: mottoSize, tracking: 0.01, upper: false, filter: 'glow' })}
+<line x1="${inset + 16}" y1="69" x2="${W - inset - 16}" y2="69" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${text(C.location, left, 82, 'label', 'ash', { size: 7, tracking: 0.12, opacity: 0.65 })}
+${text(C.signature, right, 82, 'label', 'brass', { anchor: 'end', size: 7, tracking: 0.16, opacity: 0.75 })}
+`, { extraDefs: `${FRAME_DEFS}${GLOW}` });
+}
+
 // ── run ─────────────────────────────────────────────────────────────────────
 // tools/seal/, not tools/tmp/: these two rasters are build inputs, not scratch. They live where
 // the committed generator can find them, so `node tools/build.mjs` reproduces the shipped assets
@@ -948,11 +991,12 @@ if (!SEAL_B64 || !SEAL_POCKET_B64) {
 // The page is now one sheet, with a pocket twin. The retired hero, activity/tooling/shipped/
 // spec plates are still in this generator for rollback, but they are not built: a dead asset is
 // checkout weight and a second palette waiting to drift.
-const POCKET = new Set(['hypergamy']);
+const POCKET = new Set(['hypergamy', 'motto']);
 
 async function buildSet(width) {
   setWidth(width);
   const a = {};
+  a['motto'] = width === T.meta.designWidth ? await mottoSheet() : await mottoPocket();
   a['hypergamy'] = width === T.meta.designWidth ? await hypergamySheet() : await hypergamyPocket();
   return a;
 }
