@@ -768,10 +768,10 @@ async function hypergamySheet() {
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
 ${paper.join('')}
-${premiumFrame(W, H, inset)}
-${text(g.kicker, left, 26, 'label', 'gold', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
-${text(`${g.dwg} · ${g.rev}`, right, 26, 'label', 'ash', { anchor: 'end', size: 8.5, tracking: 0.16, opacity: 0.6 })}
-<line x1="${inset + 20}" y1="34" x2="${W - inset - 20}" y2="34" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${premiumFrame(W, H, inset, 0.8)}
+${text(g.kicker, left, 27, 'label', 'gold', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
+${text(`${g.dwg} · ${g.rev}`, right, 27, 'label', 'ash', { anchor: 'end', size: 8.5, tracking: 0.16, opacity: 0.6 })}
+<line x1="${inset + 20}" y1="35" x2="${W - inset - 20}" y2="35" stroke="${col('brass')}" stroke-opacity="0.2"/>
 ${text(t1, left, 86, 'display', 'ash', { size: titleSize, tracking: 0.02 })}
 ${text(t2, left + w1, 86, 'display', 'gold', { size: titleSize, tracking: 0.02 })}
 ${text(t3, left + w1 + w2 + titleGap, 86, 'display', 'gilt', { size: titleSize, tracking: 0.02, filter: 'glow' })}
@@ -792,9 +792,9 @@ ${rows}
 ${rings}
 <circle cx="${seal.cx}" cy="${seal.cy}" r="100" fill="none" stroke="${col('gold')}"
         stroke-opacity="0.35" stroke-width="1" stroke-dasharray="2 10" class="spin"/>
-${text(C.name, seal.cx, 432, 'display', 'gilt',
+${text(C.name, seal.cx, 437, 'display', 'gilt',
     { anchor: 'middle', size: 24, tracking: 0.06, filter: 'glow' })}
-${text(C.role, seal.cx, 450, 'label', 'ash', { anchor: 'middle', size: 8.5, tracking: 0.12 })}
+${text(C.role, seal.cx, 454, 'label', 'ash', { anchor: 'middle', size: 8.5, tracking: 0.12 })}
 ${tag}
 <g transform="rotate(-4 ${seal.cx} 502)">
   <rect x="${seal.cx - 64}" y="490" width="128" height="24" fill="none"
@@ -803,11 +803,11 @@ ${tag}
         stroke="${col('gold')}" stroke-opacity="0.22"/>
   ${text(g.status, seal.cx, 506, 'label', 'gilt', { anchor: 'middle', size: 9, tracking: 0.18 })}
 </g>
-${text(g.joke, seal.cx, 526, 'label', 'ash', { anchor: 'middle', size: 8, tracking: 0.14, opacity: 0.65 })}
+${text(g.joke, seal.cx, 530, 'label', 'ash', { anchor: 'middle', size: 8, tracking: 0.14, opacity: 0.65 })}
 <line x1="${left}" y1="540" x2="${right}" y2="540" stroke="${col('brass')}" stroke-opacity="0.2"/>
-${text(g.caption, left, 560, 'body', 'gold', { size: 11.5, tracking: 0.01, upper: false })}
-${text(g.punchline, right, 560, 'label', 'brass', { anchor: 'end', size: 8.5, tracking: 0.14 })}
-${text(g.disclaimer, left, 578, 'label', 'ash', { size: 8, tracking: 0.14, opacity: 0.65 })}
+${text(g.caption, left, 554, 'body', 'gold', { size: 11.5, tracking: 0.01, upper: false })}
+${text(g.punchline, right, 554, 'label', 'brass', { anchor: 'end', size: 8.5, tracking: 0.14 })}
+${text(g.disclaimer, left, 572, 'label', 'ash', { size: 8, tracking: 0.14, opacity: 0.65 })}
 `, {
     style: GRAPH_CSS,
     extraDefs: `${FRAME_DEFS}${GLOW}${BAR_FILL}
@@ -860,10 +860,10 @@ async function hypergamyPocket() {
 
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
-${premiumFrame(W, H, inset, 0.72)}
-${text('HYPERGAMY', left, 26, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
-${text(`${g.dwg} · REV B`, right, 26, 'label', 'ash', { anchor: 'end', size: 7.5, tracking: 0.14, opacity: 0.6 })}
-<line x1="${inset + 16}" y1="34" x2="${W - inset - 16}" y2="34" stroke="${col('brass')}" stroke-opacity="0.2"/>
+${premiumFrame(W, H, inset, 0.6)}
+${text('HYPERGAMY', left, 27, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
+${text(`${g.dwg} · REV B`, right, 27, 'label', 'ash', { anchor: 'end', size: 7.5, tracking: 0.14, opacity: 0.6 })}
+<line x1="${inset + 16}" y1="35" x2="${W - inset - 16}" y2="35" stroke="${col('brass')}" stroke-opacity="0.2"/>
 ${text(g.titleA + g.titleB + g.titleC, W / 2, 60, 'display', 'gilt',
     { anchor: 'middle', size: titleSize, tracking: 0.03, filter: 'glow' })}
 ${text(g.subtitle, W / 2, 74, 'body', 'ash',

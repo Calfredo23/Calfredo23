@@ -129,6 +129,38 @@ export async function measure(page, width) {
   return capture({ page, out: '', width, height: 1000, shots: [] });
 }
 
+// Run an expression in a freshly attached page — the probe path for measuring real glyph
+// boxes against frame strokes without a screenshot or an OCR guess.
+export async function evaluate(page, width, expression, { height = 1000, settle = 300 } = {}) {
+  if (!server) {
+    const s = await launchChrome();
+    const ws = new WebSocket(s.wsUrl);
+    await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
+    s.ws = ws;
+    s.cdp = new CDP(ws);
+    server = s;
+  }
+  const { cdp } = server;
+  const { targetId } = await cdp.send('Target.createTarget', { url: 'about:blank' });
+  const { sessionId } = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
+  await cdp.send('Page.enable', {}, sessionId);
+  await cdp.send('Emulation.setDeviceMetricsOverride',
+    { width, height, deviceScaleFactor: 1, mobile: false }, sessionId);
+  const load = cdp.waitEvent('Page.loadEventFired', sessionId);
+  await cdp.send('Page.navigate', {
+    url: 'file:///' + path.resolve(page).split(path.sep).join('/'),
+  }, sessionId);
+  await load;
+  await sleep(settle);
+  const { result, exceptionDetails } = await cdp.send('Runtime.evaluate',
+    { expression, returnByValue: true, awaitPromise: true }, sessionId);
+  await cdp.send('Target.closeTarget', { targetId });
+  if (exceptionDetails) {
+    throw new Error('evaluate: ' + (exceptionDetails.exception?.description || exceptionDetails.text));
+  }
+  return result.value;
+}
+
 export async function close() {
   if (!server) return;
   server.ws.close();
