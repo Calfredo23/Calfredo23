@@ -9,7 +9,7 @@ scale, geometry) and `content.js` (every word that appears on the page), by `bui
 node tools/build.mjs --check
 ```
 
-It renders both assets to memory (the hypergamy graph, master and pocket), diffs each against the
+It renders both assets to memory (the specialization index, master and pocket), diffs each against the
 file on disk, prints `(drift)` and exits non-zero if any differ. It writes nothing.
 
 ## Why a generator at all
@@ -36,7 +36,7 @@ not committed; the answers are, and they are reproducible from the table above.
 | | |
 | :-- | :-- |
 | `build.mjs` | render + write `../assets/*`, print the size manifest, enforce the budget |
-| `content.js` | every string on the page — the hypergamy graph; retired identity and section copy remains for rollback |
+| `content.js` | every string on the page — the specialization index; retired identity and section copy remains for rollback |
 | `tokens.json` | palette, type roles, widths, tick geometry |
 | `fonts.mjs` | asks Google's `css2` API for a subset face per character set; caches by `sha1(family\|weight\|charset)` |
 | `fetch-fonts.mjs` | one-time reference metrics for the three families, used for layout before any subset exists |
@@ -64,11 +64,11 @@ in `tools/seal/`. Only `mk-seal.mjs` needs a browser, and only when `logo.svg` c
 **Budget**, printed on every run and measured rather than guessed: 48 KB per asset, 160 KB per
 visitor (the larger of the two `<picture>` branches — a reader downloads exactly one), 320 KB for
 the whole folder — the graph rides the same branch logic, so a visitor downloads one graph.
-Currently 47,248 B / 90,284 B.
+Currently 47,468 B / 90,801 B.
 
 The hero and the retired activity, field-work, tooling, shipped and specification sheets are not
 built; their generators and copy remain in `build.mjs` and `content.js` for rollback. The motto
-band was removed outright after owner review. `buildSet()` builds only the hypergamy graph: a dead
+band was removed outright after owner review. `buildSet()` builds only the specialization index: a dead
 asset is checkout weight and a second palette waiting to drift.
 
 ## One trap worth knowing about

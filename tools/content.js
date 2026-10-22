@@ -1,6 +1,6 @@
 // The only place a word is written for this profile.
 // Every string here is either transcribed from details.txt or is a measured fact — with one
-// deliberate exception: the hypergamy graph's shares are authored for the joke, and the asset
+// deliberate exception: the specialization index's shares are authored for the joke, and the asset
 // prints "percentages are vibes, not telemetry" on its own face. Nothing is passed off as data.
 // tools/build.mjs reads this and nothing else for copy.
 
@@ -84,23 +84,25 @@ export const plate = {
 //     links:[{a,b,kind:'wireless|fiber|copper',label}], zones:[{label,x,y,w,h}] }
 export const topology = null;
 
-// THE HYPERGAMY GRAPH. A parody of the two-panel "hypergamy chart" meme, applied to stacks:
+// THE SPECIALIZATION INDEX. A parody of the old two-panel ranking meme, applied to stacks:
 // the joke is that attention does not distribute evenly across a generalist's interests.
 // These percentages are AUTHORED FOR THE JOKE, not measured — the asset says so on its own face
 // ("percentages are vibes, not telemetry"), which is the condition for drawing them at all.
 // Relationship-status lines describe technologies, never people. Keep it self-deprecating.
+// The export key and asset filenames remain `hypergamy` for URL compatibility; the visible title
+// is THE SPECIALIZATION INDEX.
 export const hypergamy = {
   kicker: 'ATTENTION TOPOLOGY',
   titleA: 'THE ',
-  titleB: 'HYPERGAMY',
-  titleC: ' GRAPH',
+  titleB: 'SPECIALIZATION',
+  titleC: ' INDEX',
   subtitle: 'A totally scientific diagram of where a full-stack developer\'s attention actually goes.',
   note: 'NO DISCIPLINE WAS HARMED.',
   dwg: 'CAL-PRF-2026-02',
   rev: 'B · 2026-10-21',
   status: 'OPEN TO WORK',
   joke: '100% COMMITMENT ISSUES',
-  caption: 'HYPERGAMY (n.) — dating up. Applied to stacks: refusing to specialize.',
+  caption: 'SPECIALIZATION (n.) — committing to one thing. Applied to stacks: refusing to choose.',
   punchline: 'TOUCHING GRASS: 0% — NOT PICTURED.',
   disclaimer: 'PERCENTAGES ARE VIBES, NOT TELEMETRY.',
   // pct values are chart shares and sum to 100.

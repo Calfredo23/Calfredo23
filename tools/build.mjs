@@ -601,7 +601,7 @@ ${text(caption, inset + 14, H - inset - 14, 'label', 'gold', { size: 9, tracking
     { extraDefs: '' });
 }
 
-// ── the hypergamy graph ─────────────────────────────────────────────────────
+// ── the specialization index ───────────────────────────────────────────────
 // A parody chart, not a measurement. The shares are authored in content.js and the sheet says
 // so on its face. The drawing is a tree: the seal is the high-value node, six disciplines are
 // the suitors, and line weight follows the share. Everything is vector except the seal raster,
@@ -886,7 +886,7 @@ async function hypergamyPocket() {
   return svgDoc(H, `
 <rect width="${W}" height="${H}" fill="${col('sheet')}"/>
 ${premiumFrame(W, H, inset, 0.6)}
-${text('HYPERGAMY', left, 27, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
+${text('SPECIALIZATION', left, 27, 'label', 'gold', { size: 7.5, tracking: 0.18, opacity: 0.85 })}
 ${text(`${g.dwg} · REV B`, right, 27, 'label', 'ash', { anchor: 'end', size: 7.5, tracking: 0.14, opacity: 0.6 })}
 <line x1="${inset + 16}" y1="35" x2="${W - inset - 16}" y2="35" stroke="${col('brass')}" stroke-opacity="0.2"/>
 ${text(g.titleA + g.titleB + g.titleC, W / 2, 60, 'display', 'gilt',
