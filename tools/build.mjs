@@ -639,59 +639,57 @@ const FRAME_DEFS = `
 <linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="1">
   <stop stop-color="${col('brass')}"/><stop offset=".5" stop-color="${col('gilt')}"/><stop offset="1" stop-color="${col('gold')}"/>
 </linearGradient>
-<g id="deco">
-  <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
-  <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="${col('gold')}" stroke-opacity="0.35"/>
-  <path d="M0 0 H18 V6 H12 V12 H6 V18 H0" fill="none" stroke="${col('plate')}" stroke-opacity="0.85" stroke-width="0.8"/>
-  <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="${col('brass')}" stroke-opacity="0.3"/>
-  <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="${col('brass')}" stroke-opacity="0.2"/>
-  <path d="M0 -3 L3 0 L0 3 L-3 0 Z" fill="${col('plate')}" stroke="${col('gilt')}" stroke-opacity="0.55" stroke-width="0.7"/>
+<g id="corner">
+  <path d="M1 8 L8 1" fill="none" stroke="${col('gold')}" stroke-opacity="0.45"/>
+  <path d="M16 4 H27 M4 16 V27" fill="none" stroke="${col('gold')}" stroke-opacity="0.55"/>
+  <path d="M16 9 H22 M9 16 V22" fill="none" stroke="${col('block')}" stroke-opacity="0.9"/>
+  <rect x="2" y="2" width="4" height="4" fill="${col('plate')}" stroke="${col('gold')}" stroke-opacity="0.7" stroke-width="0.7"/>
 </g>
-<g id="crest">
-  <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="${col('brass')}" fill-opacity="0.7"/>
-  <path d="M-18 0 H-8 M8 0 H18" fill="none" stroke="${col('brass')}" stroke-opacity="0.35"/>
+<g id="port">
+  <path d="M-14 0 H-5 L-2 3 H2 L5 0 H14" fill="none" stroke="url(#fgrad)" stroke-width="1.2"/>
+  <rect x="-9" y="0" width="18" height="4" fill="${col('plate')}" stroke="${col('gold')}" stroke-opacity="0.55" stroke-width="0.7"/>
+  <path d="M-5 2 H5" fill="none" stroke="${col('block')}" stroke-opacity="0.95"/>
+</g>
+<g id="node">
+  <rect x="-3" y="-3" width="6" height="6" fill="${col('plate')}" stroke="${col('gold')}" stroke-opacity="0.65" stroke-width="0.8"/>
+  <rect x="-1" y="-1" width="2" height="2" fill="${col('block')}"/>
 </g>`;
 
 function premiumFrame(w, h, inset, s = 1) {
-  const a = inset, z = w - inset, b = h - inset;
-  // Engraved ruler band: hairline ticks in the 6 px channel between the two frame rules.
-  // They start 40 px in from every corner, so the corner ornaments never paint over them,
-  // and they live inside the frame band, where no text is placed to collide with.
+  const a = inset, z = w - inset, b = h - inset, k = 12;
+  const cut = (x, y, ww, hh, kk) =>
+    `M${n(x + kk)} ${n(y)} H${n(x + ww - kk)} L${n(x + ww)} ${n(y + kk)} ` +
+    `V${n(y + hh - kk)} L${n(x + ww - kk)} ${n(y + hh)} H${n(x + kk)} ` +
+    `L${n(x)} ${n(y + hh - kk)} V${n(y + kk)} Z`;
   const band = (span) => {
     let d = '';
-    for (let x = inset + 40; x <= span - inset - 40; x += 48) d += `M${n(x)} 1v2`;
+    for (let x = 32; x <= span - 32; x += 24) {
+      d += `M${x} 0v${(x - 32) % 96 === 0 ? 5 : 2.5}`;
+    }
     return d;
   };
   const runX = band(w), runY = band(h);
-  // One geometry each in <defs>, four <use> placements — the ticks and the mid-edge
-  // jewel are written to the SVG once, stroke included, like #deco and #crest above.
-  const TICKS = `<defs>
-    <path id="tx" d="${runX}" stroke="${col('brass')}" stroke-opacity=".24"/>
-    <path id="ty" d="${runY}" stroke="${col('brass')}" stroke-opacity=".24"/>
-    <g id="ej">
-      <path d="M0 -3.4 L3.4 0 L0 3.4 L-3.4 0 Z" fill="${col('gilt')}"/>
-      <path d="M0 -1.6 L1.6 0 L0 1.6 L-1.6 0 Z" fill="${col('plate')}"/>
-    </g>
+  const RAILS = `<defs>
+    <path id="tx" d="${runX}" fill="none" stroke="${col('brass')}" stroke-opacity=".28"/>
+    <path id="ty" d="${runY}" fill="none" stroke="${col('brass')}" stroke-opacity=".28"/>
   </defs>`;
-  const ticks =
-    `${TICKS}
-    <use href="#tx" transform="translate(${a} ${a})"/>` +
-    `<use href="#ty" transform="translate(${a} ${a})"/>` +
-    `<use href="#ty" transform="translate(${z} ${a}) scale(-1 1)"/>` +
-    `<use href="#tx" transform="translate(${a} ${b}) scale(1 -1)"/>`;
-  return ticks +
-`<rect x="${a}" y="${a}" width="${z - a}" height="${b - a}" fill="none"
-      stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
-<rect x="${a + 6}" y="${a + 6}" width="${z - a - 12}" height="${b - a - 12}" fill="none"
-      stroke="${col('gold')}" stroke-opacity="0.3"/>
-<use href="#deco" transform="translate(${a} ${a}) scale(${s})"/>
-<use href="#deco" transform="translate(${z} ${a}) scale(${-s} ${s})"/>
-<use href="#deco" transform="translate(${a} ${b}) scale(${s} ${-s})"/>
-<use href="#deco" transform="translate(${z} ${b}) scale(${-s} ${-s})"/>
-<use href="#ej" transform="translate(${a} ${n(h / 2)})"/>
-<use href="#ej" transform="translate(${z} ${n(h / 2)})"/>
-<use href="#crest" transform="translate(${n(w / 2)} ${a}) scale(${s})"/>
-<use href="#crest" transform="translate(${n(w / 2)} ${b}) scale(${s})"/>`;
+  return RAILS +
+`<path d="${cut(a, a, z - a, b - a, k)}" fill="none"
+      stroke="url(#fgrad)" stroke-opacity="0.75" stroke-width="1.3"/>
+<path d="${cut(a + 6, a + 6, z - a - 12, b - a - 12, 8)}" fill="none"
+      stroke="${col('rule')}" stroke-opacity="0.55" stroke-width="0.9"/>
+<use href="#tx" transform="translate(${a} ${a})"/>
+<use href="#ty" transform="translate(${a} ${a})"/>
+<use href="#ty" transform="translate(${z} ${a}) scale(-1 1)"/>
+<use href="#tx" transform="translate(${a} ${b}) scale(1 -1)"/>
+<use href="#corner" transform="translate(${a} ${a}) scale(${s})"/>
+<use href="#corner" transform="translate(${z} ${a}) scale(${-s} ${s})"/>
+<use href="#corner" transform="translate(${a} ${b}) scale(${s} ${-s})"/>
+<use href="#corner" transform="translate(${z} ${b}) scale(${-s} ${-s})"/>
+<use href="#port" transform="translate(${n(w / 2)} ${a}) scale(${s})"/>
+<use href="#port" transform="translate(${n(w / 2)} ${b}) scale(${s} ${-s})"/>
+<use href="#node" transform="translate(${a} ${n(h / 2)}) scale(${s})"/>
+<use href="#node" transform="translate(${z} ${n(h / 2)}) scale(${s})"/>`;
 }
 const GRAPH_CSS = `
 @media (prefers-reduced-motion: no-preference){
@@ -931,48 +929,6 @@ ${text(g.disclaimer, left, 468, 'label', 'ash', { size: 7, tracking: 0.12, opaci
 }
 
 
-// ── the motto band ──────────────────────────────────────────────────────────
-// A quiet opening rail, not a second hero: the handle rail, the motto, and the
-// location/signature line, inside the same engraved frame language as the sheet
-// below it. It exists to open the page before the drawing does the talking.
-async function mottoSheet() {
-  RUNS = new Map();
-  const H = 126, inset = T.geometry.tickInset;
-  const left = inset + 26, right = W - inset - 26;
-  const g = C.hypergamy;
-  const mottoSize = fit(C.motto, 'body', right - left, 18, 0.03);
-  return svgDoc(H, `
-<rect width="${W}" height="${H}" fill="${col('sheet')}"/>
-${premiumFrame(W, H, inset, 0.8)}
-${text(`${C.name} \u00b7 ${C.role}`, left, 30, 'label', 'brass', { size: 8.5, tracking: 0.2, opacity: 0.85 })}
-${text(g.status, right, 30, 'label', 'gilt', { anchor: 'end', size: 8.5, tracking: 0.22 })}
-<line x1="${inset + 20}" y1="40" x2="${W - inset - 20}" y2="40" stroke="${col('brass')}" stroke-opacity="0.2"/>
-${text(C.motto, left, 74, 'body', 'gilt', { size: mottoSize, tracking: 0.03, upper: false, filter: 'glow' })}
-<line x1="${inset + 20}" y1="89" x2="${W - inset - 20}" y2="89" stroke="${col('brass')}" stroke-opacity="0.2"/>
-${text(C.location, left, 106, 'label', 'ash', { size: 8, tracking: 0.16, opacity: 0.65 })}
-${text(C.signature, right, 106, 'label', 'brass', { anchor: 'end', size: 8, tracking: 0.2, opacity: 0.75 })}
-`, { extraDefs: `${FRAME_DEFS}${GLOW}` });
-}
-
-async function mottoPocket() {
-  RUNS = new Map();
-  const H = 104, inset = T.geometry.tickInset;
-  const left = inset + 20, right = W - inset - 20;
-  const g = C.hypergamy;
-  const mottoSize = fit(C.motto, 'body', right - left, 11, 0.01);
-  return svgDoc(H, `
-<rect width="${W}" height="${H}" fill="${col('sheet')}"/>
-${premiumFrame(W, H, inset, 0.6)}
-${text(C.role, left, 27, 'label', 'brass', { size: 7.5, tracking: 0.14, opacity: 0.85 })}
-${text(g.status, right, 27, 'label', 'gilt', { anchor: 'end', size: 7.5, tracking: 0.16 })}
-<line x1="${inset + 16}" y1="35" x2="${W - inset - 16}" y2="35" stroke="${col('brass')}" stroke-opacity="0.2"/>
-${text(C.motto, left, 58, 'body', 'gilt', { size: mottoSize, tracking: 0.01, upper: false, filter: 'glow' })}
-<line x1="${inset + 16}" y1="69" x2="${W - inset - 16}" y2="69" stroke="${col('brass')}" stroke-opacity="0.2"/>
-${text(C.location, left, 82, 'label', 'ash', { size: 7, tracking: 0.12, opacity: 0.65 })}
-${text(C.signature, right, 82, 'label', 'brass', { anchor: 'end', size: 7, tracking: 0.16, opacity: 0.75 })}
-`, { extraDefs: `${FRAME_DEFS}${GLOW}` });
-}
-
 // ── run ─────────────────────────────────────────────────────────────────────
 // tools/seal/, not tools/tmp/: these two rasters are build inputs, not scratch. They live where
 // the committed generator can find them, so `node tools/build.mjs` reproduces the shipped assets
@@ -991,12 +947,11 @@ if (!SEAL_B64 || !SEAL_POCKET_B64) {
 // The page is now one sheet, with a pocket twin. The retired hero, activity/tooling/shipped/
 // spec plates are still in this generator for rollback, but they are not built: a dead asset is
 // checkout weight and a second palette waiting to drift.
-const POCKET = new Set(['hypergamy', 'motto']);
+const POCKET = new Set(['hypergamy']);
 
 async function buildSet(width) {
   setWidth(width);
   const a = {};
-  a['motto'] = width === T.meta.designWidth ? await mottoSheet() : await mottoPocket();
   a['hypergamy'] = width === T.meta.designWidth ? await hypergamySheet() : await hypergamyPocket();
   return a;
 }

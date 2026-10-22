@@ -3,17 +3,20 @@
 <linearGradient id="fgrad" x1="0" y1="0" x2="1" y2="1">
   <stop stop-color="#d79628"/><stop offset=".5" stop-color="#ffd884"/><stop offset="1" stop-color="#d9a543"/>
 </linearGradient>
-<g id="deco">
-  <path d="M0 0 H30 V10 H20 V20 H10 V30 H0" fill="none" stroke="url(#fgrad)" stroke-opacity="0.9" stroke-width="1.2"/>
-  <path d="M0 0 H24 V8 H16 V16 H8 V24 H0" fill="none" stroke="#d9a543" stroke-opacity="0.35"/>
-  <path d="M0 0 H18 V6 H12 V12 H6 V18 H0" fill="none" stroke="#2c011a" stroke-opacity="0.85" stroke-width="0.8"/>
-  <path d="M20 0 A20 20 0 0 1 0 20" fill="none" stroke="#d79628" stroke-opacity="0.3"/>
-  <path d="M12 0 A12 12 0 0 1 0 12" fill="none" stroke="#d79628" stroke-opacity="0.2"/>
-  <path d="M0 -3 L3 0 L0 3 L-3 0 Z" fill="#2c011a" stroke="#ffd884" stroke-opacity="0.55" stroke-width="0.7"/>
+<g id="corner">
+  <path d="M1 8 L8 1" fill="none" stroke="#d9a543" stroke-opacity="0.45"/>
+  <path d="M16 4 H27 M4 16 V27" fill="none" stroke="#d9a543" stroke-opacity="0.55"/>
+  <path d="M16 9 H22 M9 16 V22" fill="none" stroke="#3e0123" stroke-opacity="0.9"/>
+  <rect x="2" y="2" width="4" height="4" fill="#2c011a" stroke="#d9a543" stroke-opacity="0.7" stroke-width="0.7"/>
 </g>
-<g id="crest">
-  <path d="M0 -4 L4 0 L0 4 L-4 0 Z" fill="#d79628" fill-opacity="0.7"/>
-  <path d="M-18 0 H-8 M8 0 H18" fill="none" stroke="#d79628" stroke-opacity="0.35"/>
+<g id="port">
+  <path d="M-14 0 H-5 L-2 3 H2 L5 0 H14" fill="none" stroke="url(#fgrad)" stroke-width="1.2"/>
+  <rect x="-9" y="0" width="18" height="4" fill="#2c011a" stroke="#d9a543" stroke-opacity="0.55" stroke-width="0.7"/>
+  <path d="M-5 2 H5" fill="none" stroke="#3e0123" stroke-opacity="0.95"/>
+</g>
+<g id="node">
+  <rect x="-3" y="-3" width="6" height="6" fill="#2c011a" stroke="#d9a543" stroke-opacity="0.65" stroke-width="0.8"/>
+  <rect x="-1" y="-1" width="2" height="2" fill="#3e0123"/>
 </g><filter id="glow" x="-40%" y="-60%" width="180%" height="240%">
 <feGaussianBlur stdDeviation="7" result="b"/>
 <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
@@ -44,25 +47,24 @@
 <rect width="840" height="596" fill="#100009"/>
 <path d="M320 124V540M360 124V540M400 124V540M440 124V540M480 124V540M520 124V540M560 124V540M600 124V540M640 124V540M680 124V540M720 124V540M760 124V540M800 124V540M320 124H803M320 164H803M320 204H803M320 244H803M320 284H803M320 324H803M320 364H803M320 404H803M320 444H803M320 484H803M320 524H803" fill="none" stroke="#d79628" stroke-opacity="0.045"/>
 <defs>
-    <path id="tx" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2M339 1v2M387 1v2M435 1v2M483 1v2M531 1v2M579 1v2M627 1v2M675 1v2M723 1v2M771 1v2" stroke="#d79628" stroke-opacity=".24"/>
-    <path id="ty" d="M51 1v2M99 1v2M147 1v2M195 1v2M243 1v2M291 1v2M339 1v2M387 1v2M435 1v2M483 1v2M531 1v2" stroke="#d79628" stroke-opacity=".24"/>
-    <g id="ej">
-      <path d="M0 -3.4 L3.4 0 L0 3.4 L-3.4 0 Z" fill="#ffd884"/>
-      <path d="M0 -1.6 L1.6 0 L0 1.6 L-1.6 0 Z" fill="#2c011a"/>
-    </g>
-  </defs>
-    <use href="#tx" transform="translate(11 11)"/><use href="#ty" transform="translate(11 11)"/><use href="#ty" transform="translate(829 11) scale(-1 1)"/><use href="#tx" transform="translate(11 585) scale(1 -1)"/><rect x="11" y="11" width="818" height="574" fill="none"
-      stroke="url(#fgrad)" stroke-opacity="0.65" stroke-width="1.4"/>
-<rect x="17" y="17" width="806" height="562" fill="none"
-      stroke="#d9a543" stroke-opacity="0.3"/>
-<use href="#deco" transform="translate(11 11) scale(0.8)"/>
-<use href="#deco" transform="translate(829 11) scale(-0.8 0.8)"/>
-<use href="#deco" transform="translate(11 585) scale(0.8 -0.8)"/>
-<use href="#deco" transform="translate(829 585) scale(-0.8 -0.8)"/>
-<use href="#ej" transform="translate(11 298)"/>
-<use href="#ej" transform="translate(829 298)"/>
-<use href="#crest" transform="translate(420 11) scale(0.8)"/>
-<use href="#crest" transform="translate(420 585) scale(0.8)"/>
+    <path id="tx" d="M32 0v5M56 0v2.5M80 0v2.5M104 0v2.5M128 0v5M152 0v2.5M176 0v2.5M200 0v2.5M224 0v5M248 0v2.5M272 0v2.5M296 0v2.5M320 0v5M344 0v2.5M368 0v2.5M392 0v2.5M416 0v5M440 0v2.5M464 0v2.5M488 0v2.5M512 0v5M536 0v2.5M560 0v2.5M584 0v2.5M608 0v5M632 0v2.5M656 0v2.5M680 0v2.5M704 0v5M728 0v2.5M752 0v2.5M776 0v2.5M800 0v5" fill="none" stroke="#d79628" stroke-opacity=".28"/>
+    <path id="ty" d="M32 0v5M56 0v2.5M80 0v2.5M104 0v2.5M128 0v5M152 0v2.5M176 0v2.5M200 0v2.5M224 0v5M248 0v2.5M272 0v2.5M296 0v2.5M320 0v5M344 0v2.5M368 0v2.5M392 0v2.5M416 0v5M440 0v2.5M464 0v2.5M488 0v2.5M512 0v5M536 0v2.5M560 0v2.5" fill="none" stroke="#d79628" stroke-opacity=".28"/>
+  </defs><path d="M23 11 H817 L829 23 V573 L817 585 H23 L11 573 V23 Z" fill="none"
+      stroke="url(#fgrad)" stroke-opacity="0.75" stroke-width="1.3"/>
+<path d="M25 17 H815 L823 25 V571 L815 579 H25 L17 571 V25 Z" fill="none"
+      stroke="#562a3e" stroke-opacity="0.55" stroke-width="0.9"/>
+<use href="#tx" transform="translate(11 11)"/>
+<use href="#ty" transform="translate(11 11)"/>
+<use href="#ty" transform="translate(829 11) scale(-1 1)"/>
+<use href="#tx" transform="translate(11 585) scale(1 -1)"/>
+<use href="#corner" transform="translate(11 11) scale(0.8)"/>
+<use href="#corner" transform="translate(829 11) scale(-0.8 0.8)"/>
+<use href="#corner" transform="translate(11 585) scale(0.8 -0.8)"/>
+<use href="#corner" transform="translate(829 585) scale(-0.8 -0.8)"/>
+<use href="#port" transform="translate(420 11) scale(0.8)"/>
+<use href="#port" transform="translate(420 585) scale(0.8 -0.8)"/>
+<use href="#node" transform="translate(11 298) scale(0.8)"/>
+<use href="#node" transform="translate(829 298) scale(0.8)"/>
 <text x="37" y="27" text-anchor="start" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.7" fill="#d9a543" fill-opacity="0.85">ATTENTION TOPOLOGY</text>
 <text x="803" y="27" text-anchor="end" font-family="JetBrains Mono" font-weight="500" font-size="8.5" letter-spacing="1.36" fill="#b8b7a9" fill-opacity="0.6">CAL-PRF-2026-02 · B · 2026-10-21</text>
 <line x1="31" y1="35" x2="809" y2="35" stroke="#d79628" stroke-opacity="0.2"/>

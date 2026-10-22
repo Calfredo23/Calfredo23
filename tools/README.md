@@ -63,13 +63,13 @@ in `tools/seal/`. Only `mk-seal.mjs` needs a browser, and only when `logo.svg` c
 
 **Budget**, printed on every run and measured rather than guessed: 48 KB per asset, 160 KB per
 visitor (the larger of the two `<picture>` branches — a reader downloads exactly one), 320 KB for
-the whole folder — the motto band rides the same branch logic, so a visitor downloads one
-band + one graph. Currently 59,001 B / 113,834 B.
+the whole folder — the graph rides the same branch logic, so a visitor downloads one graph.
+Currently 47,248 B / 90,284 B.
 
-The hero and the retired activity, field-work, tooling, shipped and specification sheets were
-removed from the page on 2026-10-21. Their generators remain in `build.mjs` and their copy remains
-in `content.js` for rollback, but `buildSet()` no longer builds them: a dead asset is checkout
-weight and a second palette waiting to drift.
+The hero and the retired activity, field-work, tooling, shipped and specification sheets are not
+built; their generators and copy remain in `build.mjs` and `content.js` for rollback. The motto
+band was removed outright after owner review. `buildSet()` builds only the hypergamy graph: a dead
+asset is checkout weight and a second palette waiting to drift.
 
 ## One trap worth knowing about
 

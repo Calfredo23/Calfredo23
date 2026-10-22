@@ -33,7 +33,7 @@ const files = existsSync(ASSETS) ? await readdir(ASSETS) : [];
 if (!files.length) { console.error('  no assets — run node tools/build.mjs first'); process.exit(2); }
 
 // Reading order, so the sheet is a storyboard and not an alphabet.
-const ORDER = ['motto.svg', 'hypergamy.svg'];
+const ORDER = ['hypergamy.svg'];
 const master = (list) => list.filter((f) => !f.endsWith('-pocket.svg'));
 const pocket = (list) => list.filter((f) => f.endsWith('-pocket.svg'));
 const ordered = [
